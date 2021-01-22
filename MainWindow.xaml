@@ -1,4 +1,5 @@
 ﻿<Window x:Class="Aristotle.MainWindow"
+        
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,14 +7,20 @@
         xmlns:local="clr-namespace:Aristotle"
         mc:Ignorable="d" FontSize="18"
         Title="Aristotle Archives" Height="450" Width="800">
+    
     <Grid Background="#FF2F3A39">
+        
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20"/>      <!-- Column #0: Buffer -->
+            <ColumnDefinition Width="auto"/>    <!-- Column ??? -->
+            <ColumnDefinition Width="auto"/>    <!-- Column ??? -->
+            <ColumnDefinition Width="50*"/>     <!-- Column #1: Content width -->
+            <ColumnDefinition Width="auto"/>    <!-- Column ??? -->
+            <ColumnDefinition Width="20"/>      <!-- Column #2: Buffer -->
+            <ColumnDefinition Width="auto"/>    <!-- Column ??? -->
+            <ColumnDefinition Width="30*"/>     <!-- Column #3: Content width -->
+            <ColumnDefinition Width="auto"/>    <!-- Column ??? -->
+            <ColumnDefinition Width="20"/>      <!-- Column #4: Buffer -->
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
@@ -24,14 +31,23 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
-        
-        <RichTextBox x:Name="card content" Grid.Column="4" Grid.Row="7">
+
+        <RichTextBox Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="3">
             <FlowDocument>
                 <Paragraph>
                     <Run Text="Card content here"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+
+        <RichTextBox Grid.Column="6" Grid.Row="2" Grid.ColumnSpan="3">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="New Card"/>
                 </Paragraph>
             </FlowDocument>
         </RichTextBox>

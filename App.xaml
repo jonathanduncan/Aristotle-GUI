@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Aristotle"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
+             
